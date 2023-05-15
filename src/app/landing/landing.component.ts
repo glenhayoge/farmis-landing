@@ -36,7 +36,7 @@ export class LandingComponent {
       .post(`${baseUrl}/.netlify/functions/signup`, this.form.value)
       .subscribe({
         next: (res: any) => {
-          Swal.fire('Email Successfully Sent!',
+          Swal.fire('Email Successfully Sent',
           res.message);
           this.form.reset();
         },
