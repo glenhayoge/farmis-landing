@@ -29,14 +29,16 @@ export class LandingComponent {
   simpleAlert(){
     Swal.fire('Hello world!');
   }
-  
+
 	submit() {
     const baseUrl = window.location.origin;
     this.http
       .post(`${baseUrl}/.netlify/functions/signup`, this.form.value)
       .subscribe({
         next: (res: any) => {
-          Swal.fire(res.message);
+          Swal.fire('Success',
+          res.message);
+          this.form.reset();
         },
         error: (err) => {
           Swal.fire('ERROR: ' + err.error);
