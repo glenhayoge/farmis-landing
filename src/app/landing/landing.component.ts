@@ -12,13 +12,19 @@ import { ToastContainerDirective } from 'ngx-toastr';
 })
 export class LandingComponent {
 
-	form: FormGroup;
+  form: FormGroup;
+  toastMessage?: string;
+  
 
 	constructor(private http: HttpClient, private fb: FormBuilder,private toastr: ToastrService) {
-		this.form = this.fb.group({
-			email: ['', [Validators.required, Validators.email]]
-		});
+	  this.form = this.fb.group({
+      email: ['', [Validators.required, Validators.email]]
+    });
 	}
+
+  get email() {
+    return this.form.get('email');
+  }
 
   submit() {
     const baseUrl = window.location.origin;
@@ -26,10 +32,12 @@ export class LandingComponent {
       .post(`${baseUrl}/.netlify/functions/signup`, this.form.value)
       .subscribe({
         next: (res: any) => {
-          this.toastr.success(res.message, 'Success');
+          this.toastMessage = res.message;
+          this.toastr.success(this.toastMessage);
         },
         error: (err) => {
-          this.toastr.error('ERROR: ' + err.error, 'Error');
+          this.toastMessage = 'Error submitting form';
+          this.toastr.error(this.toastMessage);
         },
       });
   }
