@@ -5,7 +5,7 @@ import Airtable from 'airtable';
 const { AIRTABLE_KEY } = process.env;
 
 // USE YOUR TABLE BASE HERE
-const base = new Airtable({ apiKey: 'keyYY7UcuhDdm7vog' }).base('appe5G5hEwPMyrlXD');
+const base = new Airtable({ apiKey: AIRTABLE_KEY }).base('appe5G5hEwPMyrlXD');
 
 const handler: Handler = async (event: HandlerEvent, context: any) => {
 	try {
