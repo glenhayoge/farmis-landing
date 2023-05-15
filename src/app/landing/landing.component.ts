@@ -1,14 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
-import { ToastContainerDirective } from 'ngx-toastr';
+import Swal from 'sweetalert2'
+
 
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss'],
-  providers: [ToastrService, ToastContainerDirective],
+
 })
 export class LandingComponent {
 
@@ -16,7 +16,7 @@ export class LandingComponent {
   toastMessage?: string;
   
 
-	constructor(private http: HttpClient, private fb: FormBuilder,private toastr: ToastrService) {
+	constructor(private http: HttpClient, private fb: FormBuilder) {
 	  this.form = this.fb.group({
       email: ['', [Validators.required, Validators.email]]
     });
@@ -26,43 +26,21 @@ export class LandingComponent {
     return this.form.get('email');
   }
 
-  submit() {
+  simpleAlert(){
+    Swal.fire('Hello world!');
+  }
+  
+	submit() {
     const baseUrl = window.location.origin;
     this.http
       .post(`${baseUrl}/.netlify/functions/signup`, this.form.value)
       .subscribe({
         next: (res: any) => {
-          this.toastMessage = res.message;
-          this.toastr.success(this.toastMessage);
+          Swal.fire(res.message);
         },
         error: (err) => {
-          this.toastMessage = 'Error submitting form';
-          this.toastr.error(this.toastMessage);
+          Swal.fire('ERROR: ' + err.error);
         },
       });
   }
-  // submit() {
-	// 	const baseUrl = window.location.origin;
-	// 	this.http.post(`${baseUrl}/.netlify/functions/signup`, this.form.value).subscribe({
-	// 		next: (res: any) => {
-	// 			this.toastr.success(res.message);
-	// 		},
-	// 		error: (err) => {
-	// 			this.toastr.error('ERROR: ' + err.error);
-	// 		},
-	// 	});
-	// }
-	// submit() {
-  //   const baseUrl = window.location.origin;
-  //   this.http
-  //     .post(`${baseUrl}/.netlify/functions/signup`, this.form.value)
-  //     .subscribe({
-  //       next: (res: any) => {
-  //         alert(res.message);
-  //       },
-  //       error: (err) => {
-  //         alert('ERROR: ' + err.error);
-  //       },
-  //     });
-  // }
 }

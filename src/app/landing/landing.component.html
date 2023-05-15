@@ -1,77 +1,57 @@
 <div class="bg-white py-16 sm:py-24">
-	<div class="relative sm:py-16">
-		<div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-			<div
-				class="relative rounded-2xl px-6 py-10 bg-indigo-600 overflow-hidden shadow-xl sm:px-12 sm:py-20"
-			>
-				<div class="relative">
-					<div class="sm:text-center">
-						<h2 class="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">
-							Get notified when we&rsquo;re launching.
-						</h2>
-						<p class="mt-6 mx-auto max-w-2xl text-lg text-indigo-200">
-							Subscribe to our prelaunch list and be the first to join our upcoming app!
-						</p>
-					</div>
-					<form
-						[formGroup]="form"
-						(ngSubmit)="submit()"
-						class="mt-12 sm:mx-auto sm:max-w-lg sm:flex"
-					>
-						<div class="min-w-0 flex-1">
-							<label for="cta-email" class="sr-only">Email address</label>
-							<input
-								type="email"
-								formControlName="email"
-								class="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
-								placeholder="Enter your email"
-							/>
-							<div
-      class="text-red-500 mt-1 text-sm"
-      *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+  <div class="relative sm:py-16">
+    <div
+      class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8"
     >
-      <div *ngIf="email?.errors?.['required']">
-        Email is required
-      </div>
-      <div *ngIf="email?.errors?.['email']">
-        Please enter a valid email address
+      <div
+        class="relative rounded-2xl px-6 py-10 bg-emerald-600 overflow-hidden shadow-xl sm:px-12 sm:py-20"
+      >
+        <div class="relative">
+          <div class="sm:text-center">
+            <h2
+              class="text-3xl font-extrabold text-white tracking-tight sm:text-4xl"
+            >
+              Get notified when we go live.
+            </h2>
+            <p class="mt-6 mx-auto max-w-2xl text-lg text-emerald-200">
+              Subscribe to our pre-launch list and be the first to use the app!
+            </p>
+          </div>
+          <form
+            [formGroup]="form"
+            (ngSubmit)="submit()"
+            class="mt-12 sm:mx-auto sm:max-w-lg sm:flex"
+          >
+            <div class="min-w-0 flex-1 mt-1">
+              <label for="cta-email" class="sr-only">Email address</label>
+              <input
+                type="email"
+                formControlName="email"
+                class="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-600"
+                placeholder="Enter your email"
+              />
+              <div
+                class="text-yellow-300 mt-2 text-sm"
+                *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+              >
+                <div *ngIf="email?.errors?.['required']">*Email is required</div>
+                <div *ngIf="email?.errors?.['email']">
+                  *Please enter a valid email address
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 sm:mt-0 sm:ml-3">
+              <button
+                type="submit"
+                [disabled]="form.invalid"
+                class="block w-full rounded-md border border-transparent px-5 py-3 bg-emerald-500 text-base font-medium text-white shadow hover:bg-emerald-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-600 sm:px-10"
+              >
+                Notify me
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-						</div>
-						<div class="mt-4 sm:mt-0 sm:ml-3">
-							<button
-								type="submit"
-								[disabled]="form.invalid"
-								class="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-500 text-base font-medium text-white shadow hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10"
-							>
-								Notify me
-							</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<ng-template toastContainer class="fixed inset-x-0 top-0 flex flex-col items-center p-4 z-50">
-		<div class="toast bg-green-600 text-white font-bold rounded-md shadow-lg p-4">
-		  {{ toastMessage }}
-		</div>
-	  </ng-template>
-	<!-- <ng-template toastContainer class="max-w-xs bg-white border rounded-md shadow-lg dark:bg-gray-800 dark:border-gray-700" role="alert">
-		<div class="flex p-4">
-		  <div class="flex-shrink-0">
-			<svg class="h-4 w-4 text-green-500 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-			  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-			</svg>
-		  </div>
-		  <div class="ml-3">
-			<p class="text-sm text-gray-700 dark:text-gray-400">
-				{{ toastMessage }}
-			</p>
-		  </div>
-		</div>
-	</ng-template> -->
-	
+  </div>
 </div>
-
-
