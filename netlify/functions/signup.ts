@@ -4,7 +4,7 @@ import Airtable from 'airtable';
 // Initialize Airtable connection
 const { AIRTABLE_KEY } = process.env;
 
-// USE YOUR TABLE BASE HERE
+//TABLE BASE HERE
 const base = new Airtable({ apiKey: AIRTABLE_KEY }).base('appe5G5hEwPMyrlXD');
 
 const handler: Handler = async (event: HandlerEvent, context: any) => {
@@ -20,7 +20,7 @@ const handler: Handler = async (event: HandlerEvent, context: any) => {
 			};
 		}
 
-		// USE YOUR TABLE NAME
+		// TABLE NAME
 		// Insert our data into the table columns
 		await base('tbldv9gkcoZjwB49U').create({
 			Email: data.email
