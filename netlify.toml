@@ -1,5 +1,5 @@
 [build]
-  publish = "dist/prelaunch-page"
+  publish = "dist/farmis-landing"
   command = "ng build"
   functions = "./netlify/functions"
 [[redirects]]
