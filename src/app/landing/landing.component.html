@@ -1,81 +1,86 @@
 <section class="relative py-20">
-	<img class="hidden lg:block absolute top-0 left-0 mt-24" src="zeus-assets/icons/dots/blue-dot-left-bars.svg" alt="">
-	<div class="relative container px-4 mx-auto">
-	  <div class="flex flex-wrap items-center -mx-4">
-		<div class="w-full md:w-2/5 px-4">
-			<img class="h-64 lg:h-96 mx-auto" style="height:500px;" src="assets/phone_mock.jpg" alt="">
-		  </div>
-		<div class="w-full md:w-3/5 px-4 mb-8 md:mb-0">
-			<!-- <p class="mt-8 mx-auto text-center max-w-2xl text-lg text-emerald-600">
-				Joint our pre-launch list and be the first to use the app!
-			  </p> -->
-			
-			<div class="relative sm:py-8 py-8">
-			  <div
-				class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8"
-			  >
-				<div
-				  class="relative rounded-2xl px-6 py-12 bg-emerald-600 overflow-hidden shadow-xl sm:px-12 sm:py-20"
-				>
-				  <div class="relative">
-					<div class="sm:text-center">
-						<img class="h-12 mx-auto" style="height:36px;" src="assets/farmis-text.svg" alt="">
-						<!-- <h2 class="mb-4 text-4xl font-semibold pt-4 text-center font-heading">FARMIS</h2> -->
-						<p class="mt-2 mb-6 mx-auto max-w-2xl text-center text-md text-yellow-300">
-							Digital Agriculture Information Service Platform
-						  </p>
-					  <h2
-						class="text-3xl p-3 font-extrabold text-white tracking-tight sm:text-4xl"
-					  >
-						Get notified when we go live.
-					  </h2>
-					  <p class="mt-4 p-2 mx-auto max-w-2xl text-lg text-emerald-200">
-						Joint our pre-launch list and be the first to use the app!
-					  </p>
-					</div>
-					<form
-					  [formGroup]="form"
-					  (ngSubmit)="submit()"
-					  class="mt-8 sm:mx-auto sm:max-w-lg sm:flex"
-					>
-					  <div class="min-w-0 flex-1">
-						<label for="cta-email" class="sr-only">Email address</label>
-						<input
-						  type="email"
-						  formControlName="email"
-						  class="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-600"
-						  placeholder="Enter your email"
-						/>
-						<div
-						  class="text-yellow-300 mt-2 text-sm"
-						  *ngIf="email?.invalid && (email?.dirty || email?.touched)"
-						>
-						  <div *ngIf="email?.errors?.['required']">*Email is required</div>
-						  <div *ngIf="email?.errors?.['email']">
-							*Please enter a valid email address
-						  </div>
-						</div>
-					  </div>
-					  <div class="mt-4 sm:mt-0 sm:ml-3">
-						<button
-						  type="submit"
-						  [disabled]="form.invalid"
-						  class="block w-full rounded-md border border-transparent px-5 py-3 bg-emerald-500 text-base font-medium text-white shadow hover:bg-emerald-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-600 sm:px-10"
-						>
-						  Notify me
-						</button>
-					  </div>
-					</form>
-				  </div>
-				</div>
-			  </div>
-			</div>
-		  </div>
-
-		
-	
-	  </div>
-	</div>
-  </section>
-
-
+  <div class="relative container px-4 mx-auto">
+    <div class="flex flex-wrap items-center -mx-4">
+      <div class="w-full md:w-2/5 px-4">
+        <img
+          class="h-64 lg:h-96 mx-auto"
+          style="height: 500px"
+          src="assets/phone_mock.jpg"
+          alt=""
+        />
+      </div>
+      <div class="w-full md:w-3/5 px-4 mb-8 md:mb-0">
+        <div class="relative sm:py-8 py-8">
+          <div
+            class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8"
+          >
+            <div
+              class="relative rounded-2xl px-6 py-12 bg-emerald-600 overflow-hidden shadow-xl sm:px-12 sm:py-20"
+            >
+              <div class="relative">
+                <div class="sm:text-center">
+                  <img
+                    class="h-12 mx-auto"
+                    style="height: 36px"
+                    src="assets/farmis-text.svg"
+                    alt=""
+                  />
+                  <p
+                    class="mt-2 mb-6 mx-auto max-w-2xl text-center text-md text-yellow-300"
+                  >
+                    Digital Agriculture Information Service Platform
+                  </p>
+                  <h2
+                    class="text-3xl p-3 font-extrabold text-white tracking-tight sm:text-4xl"
+                  >
+                    Get notified when we go live.
+                  </h2>
+                  <p
+                    class="mt-4 p-2 mx-auto max-w-2xl text-lg text-emerald-200"
+                  >
+                    Joint our pre-launch list and be the first to use the app!
+                  </p>
+                </div>
+                <form
+                  [formGroup]="form"
+                  (ngSubmit)="submit()"
+                  class="mt-8 sm:mx-auto sm:max-w-lg sm:flex"
+                >
+                  <div class="min-w-0 flex-1">
+                    <label for="cta-email" class="sr-only">Email address</label>
+                    <input
+                      type="email"
+                      formControlName="email"
+                      class="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-600"
+                      placeholder="Enter your email"
+                    />
+                    <div
+                      class="text-yellow-300 mt-2 text-sm"
+                      *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+                    >
+                      <div *ngIf="email?.errors?.['required']">
+                        *Email is required
+                      </div>
+                      <div *ngIf="email?.errors?.['email']">
+                        *Please enter a valid email address
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-4 sm:mt-0 sm:ml-3">
+                    <button
+                      type="submit"
+                      [disabled]="form.invalid"
+                      class="block w-full rounded-md border border-transparent px-5 py-3 bg-emerald-500 text-base font-medium text-white shadow hover:bg-emerald-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-600 sm:px-10"
+                    >
+                      Notify me
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
