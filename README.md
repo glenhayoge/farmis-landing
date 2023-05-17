@@ -9,11 +9,11 @@ Prelaunch page for FARMIS, a Farmers Advisory Resources & Market Information Ser
 ## Technology Dependencies
 
 - Angular - The application is built using Angular, a popular web application framework.
-- Airtable - storing email addresses
-- Netlify Cloud Functions - funtions for sending email addresses form data to airtable
-- Tailwind CSS - for styling
-- SweetAlertjs - submit form  success alert message
-- Netlify CLI- site deployed to  Netlify using netlify CLI
+- Airtable API - Process and store submitted email addresses via Airtable API
+- Netlify Cloud Functions - funtions for sending form data to Airtable
+- Tailwind CSS - Styling, TW is a utility-first CSS framework for rapidly building modern websites.
+- SweetAlertjs - Submit form success alert message
+- Netlify CLI- Deploy site to Netlify with Netlify CLI
 
 ## Installation
 
