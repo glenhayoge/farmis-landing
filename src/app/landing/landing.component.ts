@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2'
 
@@ -11,6 +11,14 @@ import Swal from 'sweetalert2'
 
 })
 export class LandingComponent {
+
+  isSmallNavbar = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollY = window.scrollY;
+    this.isSmallNavbar = scrollY > 50; // Change the value to adjust when the navbar should shrink
+  }
 
   form: FormGroup;
   toastMessage?: string;
