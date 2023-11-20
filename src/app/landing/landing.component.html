@@ -2,6 +2,8 @@
   <div class="relatives overflow-hidden z-0 top-0 bg-cover bg-no-repeat bg-center"
     style="background-image:linear-gradient(to bottom, rgba(236, 253, 245, .25), rgba(6, 78, 59,.75)), url('https://images.unsplash.com/photo-1492496913980-501348b61469?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTM0NDYwNQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080'); height: 800px;">
     <!-- Main navigation container -->
+
+
     <nav [ngClass]="{
   'bg-transparent text-black  w-full fixed top-0 z-100 transition-all duration-300': !isSmallNavbar,
   'bg-emerald-600 text-gray-900  shadow-md w-full fixed top-0 z-50 transition-all duration-300': isSmallNavbar
@@ -22,31 +24,40 @@
             </svg>
           </span>
         </button>
+        <div class="flex z-100">
+          <a class="mb-4 ml-2 mr-5 mt-3 flex justify-center items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900  lg:mb-0 lg:mt-0"
+            href="#">
+            <img class="w-8 h-auto mx-auto" src="assets/farmis-logo-crown.svg" alt="" />
+
+            <img class="my-4 w-20 h-auto mx-auto ml-4" src="assets/farmis-text.svg" alt="" />
+          </a>
+        </div>
+      
         <!-- Collapsible navigation container -->
         <div class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
           id="navbarSupportedContent1" data-te-collapse-item>
           <div class="flex items-center">
-            <a class="mb-4 ml-2 mr-5 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900  dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
+            <a class="mb-4 ml-2  hidden mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900  dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
               href="#">
-              <img class="w-8 h-auto mx-auto" src="assets/farmis-logo-crown.svg" alt="" />
+              <img class="w-8 h-auto  mx-auto" src="assets/farmis-logo-crown.svg" alt="" />
 
               <img class="my-4 w-20 h-auto mx-auto ml-4" src="assets/farmis-text.svg" alt="" />
             </a>
           </div>
           <!-- Left navigation links -->
-          <ul class="list-style-none flex justify-center lg:justify-center w-full" data-te-navbar-nav-ref>
-            <li class="mx-3" data-te-nav-item-ref>
+          <ul class="list-style-none  flex lg:justify-center lg:justify-center lg:w-full mr-auto flex flex-col pl-0 lg:flex-row" data-te-navbar-nav-ref>
+            <li class="mx-3 py-2" data-te-nav-item-ref>
               <!-- Dashboard link -->
               <a class="text-neutral-200 transition duration-200 hover:text-yellow-400  hover:ease-in-out focus:text-yellow-400 disabled:text-black/30 motion-reduce:transition-none   lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
                 href="#" data-te-nav-link-ref>Dashboard</a>
             </li>
             <!-- Team link -->
-            <li class="mx-3" data-te-nav-item-ref>
+            <li class="mx-3 py-2" data-te-nav-item-ref>
               <a class="text-neutral-200 transition duration-200 hover:text-yellow-400 hover:ease-in-out focus:text-yellow-400 disabled:text-black/30 motion-reduce:transition-none   lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                 href="#" data-te-nav-link-ref>Docs</a>
             </li>
             <!-- Projects link -->
-            <li class="mx-3" data-te-nav-item-ref>
+            <li class="mx-3 py-2" data-te-nav-item-ref>
               <a class="text-neutral-200 transition duration-200 hover:text-yellow-400 hover:ease-in-out focus:text-yellow-400 disabled:text-black/30 motion-reduce:transition-none   lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                 href="#features" data-te-nav-link-ref>Features</a>
             </li>
@@ -67,6 +78,8 @@
         </div>
       </div>
     </nav>
+    
+ 
     <div class=" flex-2 flex items-center pt-36">
       <div class="text-center mx-auto">
         <p class="font-bold text-emerald-400 text-lg mb-5">A Digital Agriculture</p>
@@ -89,7 +102,7 @@
         </p>
         <div class="mb-3  mx-px">
           <div
-            class="grid items-center justify-center grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-3 lg:gap-3">
+            class="grid items-center justify-center grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-3 md:gap-3 lg:gap-3">
 
             <div class="w-full border border-2 border-gray-600 rounded-xl hover:border-yellow-500 p-px">
               <a [routerLink]="" routerLinkActive="active" ariaCurrentWhenActive="page">
