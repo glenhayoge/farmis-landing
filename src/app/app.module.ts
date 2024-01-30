@@ -7,12 +7,14 @@ import { LandingComponent } from './landing/landing.component';
 import {HttpClientModule} from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { SplashScreenComponent } from 'src/splash-screen/splash-screen.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
+    SplashScreenComponent,
 
   ],
   imports: [
