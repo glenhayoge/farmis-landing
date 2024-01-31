@@ -1,10 +1,16 @@
 # FARMIS Pre-launch Page
 
-Live Site: [https://farmis.fpda.com.pg](https://farmis.fpda.com.pg)
+Live Site: [https://farmis.fpda.com.pg](https://farmis.fpda.com.pg) or [https://farmis.ai](https://farmis.ai)
+
+
 
 Prelaunch page for FARMIS, a Farmers Advisory Resources & Market Information Service platform.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8ec29519-4bda-4db1-8fbe-845977f158d3/deploy-status)](https://app.netlify.com/sites/vocal-sfogliatella-75f027/deploys)
+
+## Promotional Banner
+
+![FARMIS](https://raw.github.com/glenhayoge/farmis-landing/main/src/assets/farmis-banner.jpg)
 
 ## Technology Dependencies
 
