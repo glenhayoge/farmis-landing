@@ -102,7 +102,7 @@
     class="w-100  mx-auto sm:max-w-2xl lg:max-w-5xl xl:max-w-7xl md:max-w-3xl md:px-12 z-10   xl:px-32">
     <div class="text-center">
       <div
-        class="block bg-gray-100 rounded-lg px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] md:py-16 md:px-12 mt-[-170px] backdrop-blur-[30px]">
+        class="block bg-white border border-gray-50 rounded-lg px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] md:py-16 md:px-12 mt-[-170px] backdrop-blur-[30px]">
         <h1 class="text-gray-400 mt-2 mb-8 text-4xl font-bold tracking-tight md:text-3xl xl:text-5xl">
           Available <span class="text-emerald-500">On All Platforms</span>
         </h1>
@@ -189,7 +189,7 @@
   <h1 class="text-gray-400 text-center mt-2 mb-4 text-4xl font-bold tracking-tight md:text-4xl xl:text-5xl">
     Know <span class="text-emerald-500">the Features</span>
   </h1>
-  <p class="font-light text-center text-gray-500 tracking-normal mb-10 text-md">Here are the major features of the app
+  <p class="font-light text-center text-gray-500 tracking-normal mb-10 text-md">Here are the major features of the service to look out for
   </p>
   <div class="relative  mx-auto">
     <div class="flex flex-wrap">
@@ -267,7 +267,7 @@
       <div class="w-full px-4 mb-10 md:mb-0">
         <div class="relative sm:py-8 py-8">
           <div class="mx-auto sm:max-w-2xl lg:max-w-5xl xl:max-w-7xl md:max-w-3xllg:px-6">
-            <div class="relative rounded-2xl px-6 py-8 bg-emerald-100 overflow-hidden  sm:px-12 sm:py-10">
+            <div class="relative rounded-2xl px-6 py-8 bg-emerald-100 border border-emerald-300 overflow-hidden  sm:px-12 sm:py-10">
               <div class="relative">
 
                 <div class="sm:text-center mt-4">
@@ -290,7 +290,7 @@
                     <input type="email" formControlName="email"
                       class="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-600"
                       placeholder="Enter your email" />
-                    <div class="text-yellow-300 mt-2 text-sm"
+                    <div class="text-red-400 mt-2 text-sm"
                       *ngIf="email?.invalid && (email?.dirty || email?.touched)">
                       <div *ngIf="email?.errors?.['required']">
                         *Email is required
@@ -308,7 +308,7 @@
                   </div>
                 </form>
                 <footer class="mt-4 ">
-                  <div class="mt-2 pb-8 mb-4 border-b border-emerald-500"></div>
+                  <!-- <div class="mt-2 pb-8 mb-4 border-b border-emerald-500"></div> -->
                   <!-- <div class="container px-4 mx-auto">
                     <p class="text-center text-sm text-gray-300">Powered by <a href="https://fpda.com.pg"
                         class="underline" target="_blank">Fresh Produce Development Agency</a></p>
