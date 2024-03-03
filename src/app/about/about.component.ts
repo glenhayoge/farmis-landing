@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2'
-import { Carousel, Dropdown, initTE, Collapse } from 'tw-elements';
+import { Carousel, Dropdown, initTE, Collapse,  Ripple } from 'tw-elements';
 
 @Component({
   selector: 'app-about',
@@ -37,7 +37,7 @@ export class AboutComponent implements OnInit {
 	}
 
   ngOnInit() {
-    initTE({ Carousel, Dropdown, Collapse });
+    initTE({ Carousel, Dropdown, Collapse,  Ripple });
   }
 
   get email() {
