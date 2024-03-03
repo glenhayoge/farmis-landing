@@ -8,6 +8,7 @@ import {HttpClientModule} from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { SplashScreenComponent } from 'src/splash-screen/splash-screen.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { SplashScreenComponent } from 'src/splash-screen/splash-screen.component
     AppComponent,
     LandingComponent,
     SplashScreenComponent,
+    AboutComponent,
 
   ],
   imports: [
