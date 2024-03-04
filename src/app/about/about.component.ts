@@ -4,6 +4,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2'
 import { Carousel, Dropdown, initTE, Collapse,  Ripple } from 'tw-elements';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -30,7 +31,7 @@ export class AboutComponent implements OnInit {
   toastMessage?: string;
   
 
-	constructor(private http: HttpClient, private fb: FormBuilder) {
+	constructor(private http: HttpClient, private fb: FormBuilder,private router: Router) {
 	  this.form = this.fb.group({
       email: ['', [Validators.required, Validators.email]]
     });
@@ -46,5 +47,9 @@ export class AboutComponent implements OnInit {
 
   simpleAlert(){
     Swal.fire('Hello world!');
+  }
+  navigateToDownloadSection() {
+    // Navigate to home page with fragment identifier
+    this.router.navigate(['/'], { fragment: 'download' });
   }
 }
