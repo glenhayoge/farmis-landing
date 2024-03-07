@@ -8,7 +8,7 @@ import { Carousel, Dropdown, initTE, Collapse } from 'tw-elements';
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
-  styleUrls: ['./landing.component.scss'],
+  
 
 })
 export class LandingComponent {

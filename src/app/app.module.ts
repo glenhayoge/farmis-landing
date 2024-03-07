@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { SplashScreenComponent } from 'src/splash-screen/splash-screen.component';
 import { AboutComponent } from './about/about.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { AboutComponent } from './about/about.component';
     LandingComponent,
     SplashScreenComponent,
     AboutComponent,
+    FooterComponent,
 
   ],
   imports: [
