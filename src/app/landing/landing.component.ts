@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2'
 import { Carousel, Dropdown, initTE, Collapse } from 'tw-elements';
@@ -13,19 +13,6 @@ import { Carousel, Dropdown, initTE, Collapse } from 'tw-elements';
 })
 export class LandingComponent {
   
-  isMobileMenuOpen: boolean = false;
-
-  toggleMobileMenu() {
-    this.isMobileMenuOpen = !this.isMobileMenuOpen;
-  } 
-  isSmallNavbar = false;
-
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const scrollY = window.scrollY;
-    this.isSmallNavbar = scrollY > 50; // Change the value to adjust when the navbar should shrink
-  }
-
   form: FormGroup;
   toastMessage?: string;
   

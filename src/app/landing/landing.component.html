@@ -1,91 +1,9 @@
 <section class="mb-20 ">
   <div class="relatives overflow-hidden z-0 top-0 bg-cover bg-no-repeat bg-center"
     style="background-image:linear-gradient(to bottom, rgba(236, 253, 245, .20), rgba(6, 78, 59,.90)), url('https://images.unsplash.com/photo-1492496913980-501348b61469?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTM0NDYwNQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080'); height: 800px;">
-    <!-- Main navigation container -->
-    <nav [ngClass]="{
-  'bg-transparent text-black  w-full fixed top-0 z-100 transition-all duration-300': !isSmallNavbar,
-  'bg-emerald-600 text-gray-900  shadow-md w-full fixed top-0 z-50 transition-all duration-300': isSmallNavbar
-}">
-      <div class="flex w-full flex-wrap mx-auto lg:py-4 px-10 flex justify-between items-center">
-        <!-- Hamburger button for mobile view -->
-        <button
-          class="block border-0 bg-transparent px-2 text-white hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0  lg:hidden"
-          type="button" data-te-collapse-init data-te-target="#navbarSupportedContent1"
-          aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
-          <!-- Hamburger icon -->
-          <span class="[&>svg]:w-7">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7">
-              <path fill-rule="evenodd"
-                d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-                clip-rule="evenodd" />
-            </svg>
-          </span>
-        </button>
-        <div class="flex z-100">
-          <a class="mb-4 ml-2 mr-5 mt-3 flex justify-center items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900  lg:mb-0 lg:mt-0"
-            href="#">
-            <img class="w-6 h-auto mx-auto" src="assets/farmis-logo-crown.svg" alt="" />
-
-            <img class="my-4 w-20 h-auto mx-auto ml-4" src="assets/farmis-text.svg" alt="" />
-          </a>
-        </div>
-        <!-- Collapsible navigation container -->
-        <div class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
-          id="navbarSupportedContent1" data-te-collapse-item>
-          <div class="flex items-center">
-            <a class="mb-4 ml-2  hidden mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900  dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
-              href="#">
-              <img class="w-8 h-auto  mx-auto" src="assets/farmis-logo-crown.svg" alt="" />
-
-              <img class="my-4 w-20 h-auto mx-auto ml-4" src="assets/farmis-text.svg" alt="" />
-            </a>
-          </div>
-          <!-- Left navigation links -->
-          <ul
-            class="list-style-none  flex lg:justify-center lg:justify-center lg:w-full mr-auto flex flex-col pl-0 lg:flex-row"
-            data-te-navbar-nav-ref>
-            <li class="mx-3 py-2" data-te-nav-item-ref>
-              <!-- App link -->
-              <a class="text-neutral-200 transition duration-200 hover:text-yellow-400  hover:ease-in-out focus:text-yellow-400 disabled:text-black/30 motion-reduce:transition-none   lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
-                href="#" data-te-nav-link-ref>App</a>
-            </li>
-            <!-- Docs link -->
-            <li class="mx-3 py-2" data-te-nav-item-ref>
-              <a class="text-neutral-200 transition duration-200 hover:text-yellow-400 hover:ease-in-out focus:text-yellow-400 disabled:text-black/30 motion-reduce:transition-none   lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-                href="#" data-te-nav-link-ref>Docs</a>
-            </li>
-            <!-- Features link -->
-            <li class="mx-3 py-2" data-te-nav-item-ref>
-              <a class="text-neutral-200 transition duration-200 hover:text-yellow-400 hover:ease-in-out focus:text-yellow-400 disabled:text-black/30 motion-reduce:transition-none   lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-                href="#features" data-te-nav-link-ref>Features</a>
-            </li>
-             <!-- API link -->
-             <li class="mx-3 py-2" data-te-nav-item-ref>
-              <a class="text-neutral-200 transition duration-200 hover:text-yellow-400 hover:ease-in-out focus:text-yellow-400 disabled:text-black/30 motion-reduce:transition-none   lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-                href="#features" data-te-nav-link-ref>API</a>
-            </li>
-             <!-- About link -->
-             <li class="mx-3 py-2" data-te-nav-item-ref>
-              <a class="text-neutral-200 transition duration-200 hover:text-yellow-400 hover:ease-in-out focus:text-yellow-400 disabled:text-black/30 motion-reduce:transition-none   lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-                href="/about" data-te-nav-link-ref>About</a>
-            </li>
-          </ul>
-        </div>
-        <!-- Right elements -->
-        <div class="relative flex items-center">
-          <div class="relative" data-te-dropdown-ref data-te-dropdown-alignment="end">
-            <!-- Second dropdown trigger -->
-            <a class="hidden-arrow flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none"
-              href="#" id="dropdownMenuButton2" role="button" data-te-dropdown-toggle-ref aria-expanded="false">
-              <div class="hidden md:flex items-center">
-                <a class="bg-yellow-400 font-semibold text-gray-600 px-6 py-2 rounded-xl hover:bg-yellow-500 transition duration-300"
-                  href="#downloads">Download</a>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <!--Main nav -->
+    <app-top-nav></app-top-nav>
+    <!--End of Nav-->
     <div class=" flex-2 flex items-center pt-36">
       <div class="text-center mx-auto">
         <p class="font-bold text-emerald-500 text-lg mb-5">A Digital Agriculture</p>
@@ -332,38 +250,6 @@
     </div>
   </div>
 </section>
-<!--Footer container-->
-<!-- <footer class="flex flex-col items-center bg-white text-center text-white ">
-  <div class="container pt-9">
-    <div class="mb-9 flex justify-center">
-      <a href="https://www.facebook.com/FARMISOfficial" target="_blank" class="mr-9 text-blue-600 rounded-full p-3 bg-gray-300">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-500 hover:text-blue-600" fill="currentColor"
-          viewBox="0 0 24 24">
-          <path
-            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
-        </svg>
-      </a>
-      <a href="https://www.linkedin.com/showcase/farmisofficial/about/" target="_blank" class="mr-9 text-blue-600 rounded-full p-3 bg-gray-300">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-500 hover:text-blue-500" fill="currentColor"
-          viewBox="0 0 24 24">
-          <path
-            d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
-        </svg>
-      </a>
-      <a href="https://www.youtube.com/@farmisofficial" target="_blank"class="mr-9 text-red-600 rounded-full p-3 bg-gray-300">
-        <svg xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 icon icon-tabler icon-tabler-brand-youtube-filled text-emerald-500 hover:text-red-500" width="24"
-          height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path
-            d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1 -5 5h-12a5 5 0 0 1 -5 -5v-8a5 5 0 0 1 5 -5zm-9 6v6a1 1 0 0 0 1.514 .857l5 -3a1 1 0 0 0 0 -1.714l-5 -3a1 1 0 0 0 -1.514 .857z"
-            stroke-width="0" fill="currentColor" />
-        </svg>
-      </a>
-
-    </div>
-  </div>
-
-</footer> -->
+<!--footer-->
 <app-footer></app-footer>
+<!--footer-->

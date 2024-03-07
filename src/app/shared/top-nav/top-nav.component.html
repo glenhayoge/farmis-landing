@@ -1,0 +1,83 @@
+<nav [ngClass]="{
+    'bg-transparent text-black  w-full fixed top-0 z-100 transition-all duration-300': !isSmallNavbar,
+    'bg-emerald-600 text-gray-900  shadow-md w-full fixed top-0 z-50 transition-all duration-300': isSmallNavbar}">
+        <div class="flex w-full flex-wrap mx-auto lg:py-4 px-10 flex justify-between items-center">
+          <!-- Hamburger button for mobile view -->
+          <button
+            class="block border-0 bg-transparent px-2 text-white hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0  lg:hidden"
+            type="button" data-te-collapse-init data-te-target="#navbarSupportedContent1"
+            aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- Hamburger icon -->
+            <span class="[&>svg]:w-7">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7">
+                <path fill-rule="evenodd"
+                  d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                  clip-rule="evenodd" />
+              </svg>
+            </span>
+          </button>
+          <div class="flex z-100">
+            <a class="mb-4 ml-2 mr-5 mt-3 flex justify-center items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900  lg:mb-0 lg:mt-0"
+              href="#">
+              <img class="w-6 h-auto mx-auto" src="assets/farmis-logo-crown.svg" alt="" />
+  
+              <img class="my-4 w-20 h-auto mx-auto ml-4" src="assets/farmis-text.svg" alt="" />
+            </a>
+          </div>
+          <!-- Collapsible navigation container -->
+          <div class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+            id="navbarSupportedContent1" data-te-collapse-item>
+            <div class="flex items-center">
+              <a class="mb-4 ml-2  hidden mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900  dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
+                href="#">
+                <img class="w-8 h-auto  mx-auto" src="assets/farmis-logo-crown.svg" alt="" />
+  
+                <img class="my-4 w-20 h-auto mx-auto ml-4" src="assets/farmis-text.svg" alt="" />
+              </a>
+            </div>
+            <!-- Left navigation links -->
+            <ul
+              class="list-style-none  flex lg:justify-center lg:justify-center lg:w-full mr-auto flex flex-col pl-0 lg:flex-row"
+              data-te-navbar-nav-ref>
+              <li class="mx-3 py-2" data-te-nav-item-ref>
+                <!-- App link -->
+                <a class="text-neutral-200 transition duration-200 hover:text-yellow-400  hover:ease-in-out focus:text-yellow-400 disabled:text-black/30 motion-reduce:transition-none   lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
+                  href="#" data-te-nav-link-ref>App</a>
+              </li>
+              <!-- Docs link -->
+              <li class="mx-3 py-2" data-te-nav-item-ref>
+                <a class="text-neutral-200 transition duration-200 hover:text-yellow-400 hover:ease-in-out focus:text-yellow-400 disabled:text-black/30 motion-reduce:transition-none   lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                  href="#" data-te-nav-link-ref>Docs</a>
+              </li>
+              <!-- Features link -->
+              <li class="mx-3 py-2" data-te-nav-item-ref>
+                <a class="text-neutral-200 transition duration-200 hover:text-yellow-400 hover:ease-in-out focus:text-yellow-400 disabled:text-black/30 motion-reduce:transition-none   lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                  href="#features" data-te-nav-link-ref>Features</a>
+              </li>
+               <!-- API link -->
+               <li class="mx-3 py-2" data-te-nav-item-ref>
+                <a class="text-neutral-200 transition duration-200 hover:text-yellow-400 hover:ease-in-out focus:text-yellow-400 disabled:text-black/30 motion-reduce:transition-none   lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                  href="#features" data-te-nav-link-ref>API</a>
+              </li>
+               <!-- About link -->
+               <li class="mx-3 py-2" data-te-nav-item-ref>
+                <a class="text-neutral-200 transition duration-200 hover:text-yellow-400 hover:ease-in-out focus:text-yellow-400 disabled:text-black/30 motion-reduce:transition-none   lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                  href="/about" data-te-nav-link-ref>About</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Right elements -->
+          <div class="relative flex items-center">
+            <div class="relative" data-te-dropdown-ref data-te-dropdown-alignment="end">
+              <!-- Second dropdown trigger -->
+              <a class="hidden-arrow flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none"
+                href="#" id="dropdownMenuButton2" role="button" data-te-dropdown-toggle-ref aria-expanded="false">
+                <div class="hidden md:flex items-center">
+                  <a class="bg-yellow-400 font-semibold text-gray-600 px-6 py-2 rounded-xl hover:bg-yellow-500 transition duration-300"
+                    href="#downloads">Download</a>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>

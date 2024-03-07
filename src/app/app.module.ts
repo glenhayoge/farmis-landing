@@ -10,6 +10,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { SplashScreenComponent } from 'src/splash-screen/splash-screen.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { TopNavComponent } from './shared/top-nav/top-nav.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     SplashScreenComponent,
     AboutComponent,
     FooterComponent,
+    TopNavComponent,
 
   ],
   imports: [
